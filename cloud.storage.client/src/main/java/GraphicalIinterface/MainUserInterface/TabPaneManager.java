@@ -35,15 +35,11 @@ public class TabPaneManager extends TabPane {
             double yWindow = getScene().getWindow().getY();
             double yMouse = MouseInfo.getPointerInfo().getLocation().getY();
 
-
                 if ((yWindow - yMouse) > - 80 && event.getButton().toString().equals("SECONDARY")) {
                     if (menuAddBox != null) menuAddBox.getItems().clear();
                     menuAddBox = new MenuAddBox(this);
                 }
 
-                if (event.getClickCount() == 3 ) {
-                    mainBox.getChildren().add(new CheckBox());
-                }
         });
 
 
